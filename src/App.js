@@ -37,12 +37,13 @@ const App = () => {
             <table className={'table table-dark table-hover'}>
                 <thead>
                 <tr>
-                    <th scope="col">name</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Username</th>
                     <th scope="col">job</th>
                     <th scope="col">Hired</th>
                     <th scope="col">Email</th>
-                    <th scope="col">action</th>
+                    <th scope="col">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -52,6 +53,7 @@ const App = () => {
                             <tr key={user.id}>
                                 <th scope="row">{index + 1} </th>
                                 <td>{user.name}</td>
+                                <td>{user.username}</td>
                                 <td>{user.job}</td>
                                 <td>{user.hired ? 'yes' : 'no'}</td>
                                 <td>{user.email}</td>

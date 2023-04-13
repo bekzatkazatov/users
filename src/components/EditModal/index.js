@@ -33,7 +33,7 @@ const EditModal = ({setShowModal,handleAddUser,editUser}) => {
                         </button>
                         <div className={'mt-3'}>
                             <CustomInput
-                                label={'name'}
+                                label={'Name'}
                                 value={user.name}
                                 id ={'name'}
                                 placeholder={'Enter name'}
