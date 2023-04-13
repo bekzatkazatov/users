@@ -1,7 +1,7 @@
 import {useState} from "react";
 import CustomInput from "../CustomInput";
 
-const Modal = ({setShowModal,handleAddUser,editUser}) => {
+const EditModal = ({setShowModal,handleAddUser,editUser}) => {
     const [user,setUser]=useState(editUser || {})
 
     const handleSubmit =(e)=> {
@@ -12,28 +12,28 @@ const Modal = ({setShowModal,handleAddUser,editUser}) => {
     }
     return (
         <div style={{position:'fixed',top:"0",left:"0",width:"100%",height:"100%",backgroundColor:"rgba(0,0,0,0.5)",
-         zIndex:1000}}>
+            zIndex:1000}}>
             <div style={{position:'absolute',
-                     top:"50%",
-                      left:'50%',
-                      transform:'translate(-50%, -50%)',
-                      backgroundColor:'#fff',
-                      width:'500px',
-                      height:'500px',
-                      borderRadius:'10px',
-                      zIndex:1000}}>
+                top:"50%",
+                left:'50%',
+                transform:'translate(-50%, -50%)',
+                backgroundColor:'#fff',
+                width:'500px',
+                height:'500px',
+                borderRadius:'10px',
+                zIndex:1000}}>
                 <form action="" onSubmit={handleSubmit}>
                     <div className="form-group p-4"
-                    style={{position:"relative"}}>
+                         style={{position:"relative"}}>
                         <button className={'btn'}
-                        style={{border:"none",background:'transparent',position:'absolute',top:'10px',right:'10px',
-                        fontSize:'20px'}}
-                        onClick={()=>setShowModal(false)}>
+                                style={{border:"none",background:'transparent',position:'absolute',top:'10px',right:'10px',
+                                    fontSize:'20px'}}
+                                onClick={()=>setShowModal(false)}>
                             X
                         </button>
                         <div className={'mt-3'}>
                             <CustomInput
-                                label={'Name'}
+                                label={'name'}
                                 value={user.name}
                                 id ={'name'}
                                 placeholder={'Enter name'}
@@ -69,11 +69,11 @@ const Modal = ({setShowModal,handleAddUser,editUser}) => {
                         </div>
                         <div className={'mt-3'}>
                             <input
-                               type="checkbox"
-                               className="btn-check"
-                               id ='btnchek1'
-                               autoComplete="off"
-                               onChange={(e) => setUser({...user,hired: e.target.checked})}
+                                type="checkbox"
+                                className="btn-check"
+                                id ='btnchek1'
+                                autoComplete="off"
+                                onChange={(e) => setUser({...user,hired: e.target.checked})}
                             />
                             <label className="btn btn-outline-primary" htmlFor='btnchek1'>Hired</label>
                         </div>
@@ -86,4 +86,4 @@ const Modal = ({setShowModal,handleAddUser,editUser}) => {
         </div>
     )
 };
-export default Modal
+export default EditModal
