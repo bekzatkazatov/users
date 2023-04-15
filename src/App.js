@@ -2,6 +2,8 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import Modal from "./components/Modal";
 import EditModal from "./components/EditModal";
+import Carousel from "./components/Carousel";
+import Gallery from "./components/Gallery";
 
 const App = () => {
     const [userLIst, setUserList] = useState([])
@@ -68,11 +70,14 @@ const App = () => {
                 }
                 </tbody>
             </table>
+
             <button
                 className={'btn btn-primary mt-2'}
                 onClick={() => setShowModal(!isShowModal)}
             >Add user
             </button>
+            <Carousel/>
+            <Gallery/>
             {
                 isShowModal && <Modal
                     handleAddUser={handleAddUser}

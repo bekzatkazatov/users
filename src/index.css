@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mySwiper{
+  height: 400px;
+  width: 600px;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
